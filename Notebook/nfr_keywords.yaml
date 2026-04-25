@@ -1,0 +1,420 @@
+
+Performance:
+  - fast
+  - quick
+  - rapid
+  - speed
+  - responsive
+  - responsiveness
+  - latency
+  - throughput
+  - efficient
+  - efficiency
+  - optimize
+  - optimization
+  - millisecond
+  - second
+  - minute
+  - response time
+  - load time
+  - processing time
+  - execution time
+  - real-time
+  - real time
+  - instantaneous
+  - immediate
+  - concurrent
+  - concurrency
+  - parallel
+  - scalable
+  - scalability
+  - high performance
+  - low latency
+  - minimal delay
+  - maximum speed
+  - bandwidth
+  - memory usage
+  - cpu usage
+  - resource consumption
+  - faster than
+  - within.*second
+  - within.*millisecond
+  - less than.*second
+  - under.*second
+  - <.*ms
+  - <.*sec
+  - perform.*quick
+  - perform.*fast
+  - high throughput
+  - low overhead
+  - lightweight
+  - accelerate
+  - cached
+  - caching
+  - indexing
+  - query optimization
+
+Security:
+  - secure
+  - security
+  - encrypt
+  - encrypted
+  - encryption
+  - decrypt
+  - decryption
+  - authenticate
+  - authentication
+  - authorize
+  - authorization
+  - access control
+  - permission
+  - permissions
+  - credential
+  - credentials
+  - password
+  - login
+  - logout
+  - sign in
+  - sign out
+  - token
+  - session
+  - firewall
+  - ssl
+  - tls
+  - https
+  - certificate
+  - private key
+  - public key
+  - hash
+  - hashing
+  - salt
+  - vulnerability
+  - threat
+  - attack
+  - breach
+  - exploit
+  - malicious
+  - sanitize
+  - sanitization
+  - validation
+  - inject
+  - injection
+  - xss
+  - csrf
+  - sql injection
+  - cross-site
+  - audit
+  - audit trail
+  - logging
+  - confidential
+  - confidentiality
+  - privacy
+  - gdpr
+  - compliance
+  - role-based
+  - rbac
+  - two-factor
+  - 2fa
+  - multi-factor
+  - mfa
+  - biometric
+  - captcha
+  - oauth
+  - jwt
+  - saml
+  - ldap
+  - active directory
+
+Usability:
+  - user-friendly
+  - user friendly
+  - usable
+  - usability
+  - intuitive
+  - easy to use
+  - ease of use
+  - simple
+  - simplicity
+  - accessible
+  - accessibility
+  - navigation
+  - navigate
+  - interface
+  - ui
+  - ux
+  - user experience
+  - user interface
+  - layout
+  - design
+  - clear
+  - clarity
+  - understandable
+  - readable
+  - readability
+  - learn
+  - learning curve
+  - onboard
+  - onboarding
+  - tutorial
+  - help
+  - documentation
+  - guide
+  - wizard
+  - tooltip
+  - hint
+  - placeholder
+  - feedback
+  - error message
+  - confirmation
+  - notification
+  - alert
+  - responsive design
+  - mobile-friendly
+  - touch-friendly
+  - keyboard shortcut
+  - keyboard navigation
+  - screen reader
+  - wcag
+  - aria
+  - contrast
+  - font size
+  - color blind
+  - disability
+  - inclusive
+  - multilingual
+  - localization
+  - internationalization
+  - consistent
+  - consistency
+
+Reliability:
+  - reliable
+  - reliability
+  - available
+  - availability
+  - uptime
+  - downtime
+  - fault-tolerant
+  - fault tolerance
+  - failover
+  - fail-safe
+  - redundant
+  - redundancy
+  - backup
+  - restore
+  - recovery
+  - recover
+  - resilient
+  - resilience
+  - stable
+  - stability
+  - robust
+  - robustness
+  - durable
+  - durability
+  - crash
+  - failure
+  - error handling
+  - exception handling
+  - retry
+  - timeout
+  - graceful degradation
+  - circuit breaker
+  - health check
+  - monitoring
+  - alerting
+  - 99.9% uptime
+  - high availability
+  - disaster recovery
+  - business continuity
+  - mtbf
+  - mttr
+  - mean time
+  - service level
+  - sla
+  - guaranteed
+  - consistent
+  - predictable
+  - zero downtime
+  - always available
+  - 24/7
+  - continuous operation
+  - uninterrupted
+  - self-healing
+  - auto-recovery
+  - load balancing
+  - replication
+  - cluster
+  - failback
+
+Maintainability:
+  - maintainable
+  - maintainability
+  - maintain
+  - maintenance
+  - modular
+  - modularity
+  - extensible
+  - extensibility
+  - flexible
+  - flexibility
+  - configurable
+  - configuration
+  - customizable
+  - customization
+  - adaptable
+  - upgrade
+  - update
+  - patch
+  - version
+  - versioning
+  - backward compatible
+  - forward compatible
+  - compatibility
+  - refactor
+  - refactoring
+  - code quality
+  - clean code
+  - readable code
+  - documented
+  - documentation
+  - comment
+  - comments
+  - self-documenting
+  - testable
+  - test coverage
+  - unit test
+  - debug
+  - debugging
+  - logging
+  - trace
+  - tracing
+  - diagnostic
+  - monitor
+  - monitoring
+  - metric
+  - metrics
+  - technical debt
+  - architecture
+  - design pattern
+  - separation of concerns
+  - loose coupling
+  - high cohesion
+  - solid principles
+  - dry principle
+  - reusable
+  - component
+  - plugin
+  - dependency injection
+  - inversion of control
+
+Portability:
+  - portable
+  - portability
+  - cross-platform
+  - platform-independent
+  - platform independent
+  - multi-platform
+  - operating system
+  - windows
+  - linux
+  - macos
+  - android
+  - ios
+  - browser
+  - chrome
+  - firefox
+  - safari
+  - edge
+  - mobile
+  - tablet
+  - desktop
+  - web
+  - cloud
+  - on-premise
+  - containerized
+  - docker
+  - kubernetes
+  - virtual machine
+  - vm
+  - compatible
+  - compatibility
+  - migrate
+  - migration
+  - export
+  - import
+  - standard
+  - standardized
+  - open standard
+  - interoperable
+  - interoperability
+  - api
+  - rest
+  - graphql
+  - soap
+  - protocol
+  - format
+  - xml
+  - json
+  - csv
+  - universal
+  - device-agnostic
+  - responsive
+  - adaptive
+  - deploy
+  - deployment
+  - install
+  - installation
+  - package
+  - distribute
+
+Scalability:
+  - scalable
+  - scalability
+  - scale
+  - scaling
+  - horizontal scaling
+  - vertical scaling
+  - scale up
+  - scale down
+  - scale out
+  - scale in
+  - auto-scaling
+  - elastic
+  - elasticity
+  - growth
+  - expand
+  - capacity
+  - load
+  - traffic
+  - concurrent users
+  - simultaneous
+  - handle.*users
+  - support.*users
+  - accommodate
+  - millions
+  - thousands
+  - large-scale
+  - enterprise-scale
+  - distributed
+  - microservices
+  - stateless
+  - sharding
+  - partitioning
+  - clustering
+  - load balancer
+  - cdn
+  - content delivery
+  - caching
+  - queue
+  - message queue
+  - asynchronous
+  - async
+  - batch processing
+  - stream processing
+  - big data
+  - high volume
+  - peak load
+  - burst traffic
+  - bottleneck
+  - resource pool
