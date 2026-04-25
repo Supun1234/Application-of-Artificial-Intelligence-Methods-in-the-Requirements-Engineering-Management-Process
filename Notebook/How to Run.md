@@ -15,7 +15,7 @@ Before opening Colab, make sure you have all these files ready:
 |---|---|
 | `Application-of-Artificial-Intelligence-Methods-in-the-Requirements-Engineering-Management-Process.ipynb` | This repository |
 | `nfr_keywords.yaml` | This repository |
-| `promise-nfr.csv` | This repository |
+| `Promise-NFR_dataset_original.csv` | This repository |
 | `NFR_Classifier/` folder | Google Drive link — see Step 1 |
 
 ---
