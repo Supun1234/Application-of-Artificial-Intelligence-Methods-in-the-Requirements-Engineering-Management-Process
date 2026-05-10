@@ -1,0 +1,629 @@
+✅ Loaded 391 tagged requirements
+
+Ground truth distribution:
+  Complete   : 337
+  Incomplete : 54
+
+🔹 Running Stage 1 on 391 requirements...
+   Completeness threshold: 0.8
+   50/391...
+   100/391...
+   150/391...
+   200/391...
+   250/391...
+   300/391...
+   350/391...
+✅ Done.
+
+=================================================================
+📊  STAGE 1 COMPLETENESS DETECTION — RESULTS (n=391)
+=================================================================
+  Accuracy          : 0.1381  (13.8%)
+  Precision         : 0.1381  (incomplete class)
+  Recall            : 1.0000  (incomplete class)
+  F1-Score          : 0.2427  (incomplete class)
+
+📋 Full Classification Report:
+              precision    recall  f1-score   support
+
+    complete       0.00      0.00      0.00       337
+  incomplete       0.14      1.00      0.24        54
+
+    accuracy                           0.14       391
+   macro avg       0.07      0.50      0.12       391
+weighted avg       0.02      0.14      0.03       391
+
+📋 Confusion Matrix:
+                 Pred complete  Pred incomplete
+True complete                0              337
+True incomplete              0               54
+
+📊 Completeness Score Distribution:
+  Complete requirements   — Mean: 0.450  Std: 0.000  Min: 0.450  Max: 0.450
+  Incomplete requirements — Mean: 0.450  Std: 0.000  Min: 0.450  Max: 0.450
+
+📊 Threshold Sensitivity (how accuracy changes with threshold):
+   Threshold   Accuracy  Precision   Recall       F1
+  --------------------------------------------------
+        0.60      13.8%      13.8%   100.0%    0.243
+        0.65      13.8%      13.8%   100.0%    0.243
+        0.70      13.8%      13.8%   100.0%    0.243
+        0.75      13.8%      13.8%   100.0%    0.243
+        0.80      13.8%      13.8%   100.0%    0.243 ← current
+        0.85      13.8%      13.8%   100.0%    0.243
+        0.90      13.8%      13.8%   100.0%    0.243
+
+📊 Operational Metrics:
+  Auto-approved (no human needed) : 0/391  (0.0%)
+  Flagged for clarification       : 391/391
+  False flag rate                 : 100.0%  (complete reqs wrongly flagged)
+  Miss rate                       : 0.0%  (incomplete reqs not caught)
+  Avg clarification questions     : 1.0 per flagged req
+
+🔍 Error Analysis:
+
+  Missed incomplete requirements (0):
+  (Stage 1 said complete but ground truth is incomplete)
+
+  Wrongly flagged complete requirements (337):
+  (Stage 1 said incomplete but ground truth is complete)
+  Score:0.45 | As a user, I want to register for a new account using my email and a p...
+  Score:0.45 | The system shall allow users to log in with their registered credentia...
+  Score:0.45 | The system must allow administrators to view a list of all registered ...
+  Score:0.45 | As a user, I want to be able to reset my password if I forget it....
+  Score:0.45 | The system shall allow users to create a new data entry....
+
+=================================================================
+  THESIS TABLE — Stage 1 Completeness Detection (n=391)
+=================================================================
+  Accuracy          : 13.8%
+  Precision         : 13.8%  (incomplete detection)
+  Recall            : 100.0%  (incomplete detection)
+  F1-Score          : 0.243
+  Automation Rate   : 0.0%
+  False Flag Rate   : 100.0%
+  Miss Rate         : 0.0%
+  Threshold used    : 0.8
+=================================================================
+
+
+
+
+
+
+
+
+============================================================
+Loading PROMISE dataset...
+✅ 625 requirements loaded
+truth_binary
+NFR    370
+FR     255
+✅ Keywords loaded from C:\Users\User\Desktop\New folder (2)\Full Pipeline\nfr_keywords.yaml
+
+Loading NoRBERT from C:\Users\User\Desktop\New folder (2)\Full Pipeline\BestModel...
+✅ NoRBERT loaded on CPU
+
+Checking Ollama (qwen2.5:7b-instruct)...
+✅ Ollama connected
+
+🔹 Starting fresh — 625 requirements
+   NoRBERT: CPU | LLM: Ollama (qwen2.5:7b-instruct) | Rules: CPU
+   Auto-saves every 50 requirements
+
+      1/625  |  Elapsed: 0.1min  |  ETA: 53.0min
+     25/625  |  Elapsed: 2.8min  |  ETA: 66.8min
+     50/625  |  Elapsed: 5.5min  |  ETA: 63.7min
+     75/625  |  Elapsed: 8.3min  |  ETA: 60.8min
+    100/625  |  Elapsed: 11.1min  |  ETA: 58.0min
+    125/625  |  Elapsed: 13.8min  |  ETA: 55.1min
+    150/625  |  Elapsed: 16.6min  |  ETA: 52.5min
+    175/625  |  Elapsed: 19.4min  |  ETA: 49.8min
+    200/625  |  Elapsed: 22.2min  |  ETA: 47.2min
+    225/625  |  Elapsed: 25.0min  |  ETA: 44.5min
+    250/625  |  Elapsed: 27.8min  |  ETA: 41.7min
+    275/625  |  Elapsed: 30.5min  |  ETA: 38.8min
+    300/625  |  Elapsed: 33.4min  |  ETA: 36.2min
+    325/625  |  Elapsed: 36.3min  |  ETA: 33.5min
+    350/625  |  Elapsed: 38.9min  |  ETA: 30.6min
+    375/625  |  Elapsed: 41.7min  |  ETA: 27.8min
+    400/625  |  Elapsed: 44.5min  |  ETA: 25.1min
+    425/625  |  Elapsed: 47.3min  |  ETA: 22.3min
+    450/625  |  Elapsed: 50.2min  |  ETA: 19.5min
+    475/625  |  Elapsed: 52.9min  |  ETA: 16.7min
+    500/625  |  Elapsed: 55.7min  |  ETA: 13.9min
+    525/625  |  Elapsed: 58.4min  |  ETA: 11.1min
+    550/625  |  Elapsed: 61.1min  |  ETA: 8.3min
+    575/625  |  Elapsed: 64.0min  |  ETA: 5.6min
+    600/625  |  Elapsed: 66.9min  |  ETA: 2.8min
+    625/625  |  Elapsed: 69.8min  |  ETA: 0.0min
+
+✅ All 625 requirements processed in 69.8 minutes
+
+========================================================================
+📊  BINARY FR/NFR RESULTS  (PROMISE, n=625)
+========================================================================
+  Rules Classifier                     n=625  Acc:56.5%  Prec:70.9%  Rec:44.9%  F1:0.550
+  LLM (Qwen2.5-7B-Instruct)            n=625  Acc:83.5%  Prec:91.1%  Rec:80.0%  F1:0.852
+  NoRBERT (10-fold CV)                 n=625  Acc:98.6%  Prec:97.9%  Rec:99.7%  F1:0.988
+  Ensemble — 3 model ★                 n=625  Acc:91.7%  Prec:95.7%  Rec:90.0%  F1:0.928
+
+📋 Ensemble Confusion Matrix:
+          Pred FR  Pred NFR
+True FR       240        15
+True NFR       37       333
+
+📋 Ensemble Full Classification Report:
+              precision    recall  f1-score   support
+
+          FR       0.87      0.94      0.90       255
+         NFR       0.96      0.90      0.93       370
+
+    accuracy                           0.92       625
+   macro avg       0.91      0.92      0.91       625
+weighted avg       0.92      0.92      0.92       625
+
+
+========================================================================
+📊  NFR SUBTYPE ACCURACY  (n=333)
+========================================================================
+  Overall: 98.2%
+
+  Per-subtype breakdown:
+                 precision    recall  f1-score   support
+
+   Availability       0.95      1.00      0.98        20
+          Legal       1.00      1.00      1.00        12
+  Look_and_Feel       1.00      1.00      1.00        28
+Maintainability       1.00      0.88      0.94        17
+    Operational       0.97      0.97      0.97        58
+    Performance       1.00      1.00      1.00        53
+    Portability       0.00      0.00      0.00         1
+    Reliability       1.00      1.00      1.00        10
+       Security       1.00      0.99      0.99        82
+      Usability       0.95      1.00      0.97        52
+
+       accuracy                           0.98       333
+      macro avg       0.89      0.88      0.88       333
+   weighted avg       0.98      0.98      0.98       333
+
+
+========================================================================
+  TABLE 3 — Classification Performance (PROMISE NFR, n=625)
+========================================================================
+  Model                                    n  Accuracy  Precision   Recall       F1
+  --------------------------------------------------------------------
+  Rules Classifier                       625     56.5%      70.9%    44.9%    0.550
+  LLM (Qwen2.5-7B-Instruct)              625     83.5%      91.1%    80.0%    0.852
+  NoRBERT (10-fold CV)                   625     98.6%      97.9%    99.7%    0.988
+  Ensemble — 3 model ★                   625     91.7%      95.7%    90.0%    0.928
+  ====================================================================
+
+🔍 Ensemble errors: 52/625
+   FP (pred NFR, true FR): 15
+   FN (pred FR, true NFR): 37
+
+   FN breakdown by subtype:
+truth_subtype
+Usability        15
+Look_and_Feel    10
+Security          5
+Operational       4
+Legal             1
+Availability      1
+Performance       1
+
+
+
+
+
+
+
+============================================================
+Loading PROMISE dataset...
+✅ 625 requirements loaded
+truth_binary
+NFR    370
+FR     255
+✅ Keywords loaded from C:\Users\User\Desktop\New folder (2)\Full Pipeline\nfr_keywords.yaml
+
+Loading NoRBERT from C:\Users\User\Desktop\New folder (2)\Full Pipeline\BestModel...
+✅ NoRBERT loaded on CPU
+
+Checking Ollama (qwen2.5:7b-instruct)...
+✅ Ollama connected
+
+🔹 Starting fresh — 625 requirements
+   NoRBERT: CPU | LLM: Ollama (qwen2.5:7b-instruct) | Rules: CPU
+   Auto-saves every 50 requirements
+
+      1/625  |  Elapsed: 0.1min  |  ETA: 53.0min
+     25/625  |  Elapsed: 2.8min  |  ETA: 66.8min
+     50/625  |  Elapsed: 5.5min  |  ETA: 63.7min
+     75/625  |  Elapsed: 8.3min  |  ETA: 60.8min
+    100/625  |  Elapsed: 11.1min  |  ETA: 58.0min
+    125/625  |  Elapsed: 13.8min  |  ETA: 55.1min
+    150/625  |  Elapsed: 16.6min  |  ETA: 52.5min
+    175/625  |  Elapsed: 19.4min  |  ETA: 49.8min
+    200/625  |  Elapsed: 22.2min  |  ETA: 47.2min
+    225/625  |  Elapsed: 25.0min  |  ETA: 44.5min
+    250/625  |  Elapsed: 27.8min  |  ETA: 41.7min
+    275/625  |  Elapsed: 30.5min  |  ETA: 38.8min
+    300/625  |  Elapsed: 33.4min  |  ETA: 36.2min
+    325/625  |  Elapsed: 36.3min  |  ETA: 33.5min
+    350/625  |  Elapsed: 38.9min  |  ETA: 30.6min
+    375/625  |  Elapsed: 41.7min  |  ETA: 27.8min
+    400/625  |  Elapsed: 44.5min  |  ETA: 25.1min
+    425/625  |  Elapsed: 47.3min  |  ETA: 22.3min
+    450/625  |  Elapsed: 50.2min  |  ETA: 19.5min
+    475/625  |  Elapsed: 52.9min  |  ETA: 16.7min
+    500/625  |  Elapsed: 55.7min  |  ETA: 13.9min
+    525/625  |  Elapsed: 58.4min  |  ETA: 11.1min
+    550/625  |  Elapsed: 61.1min  |  ETA: 8.3min
+    575/625  |  Elapsed: 64.0min  |  ETA: 5.6min
+    600/625  |  Elapsed: 66.9min  |  ETA: 2.8min
+    625/625  |  Elapsed: 69.8min  |  ETA: 0.0min
+
+✅ All 625 requirements processed in 69.8 minutes
+
+========================================================================
+📊  BINARY FR/NFR RESULTS  (PROMISE, n=625)
+========================================================================
+  Rules Classifier                     n=625  Acc:56.5%  Prec:70.9%  Rec:44.9%  F1:0.550
+  LLM (Qwen2.5-7B-Instruct)            n=625  Acc:83.5%  Prec:91.1%  Rec:80.0%  F1:0.852
+  NoRBERT (10-fold CV)                 n=625  Acc:98.6%  Prec:97.9%  Rec:99.7%  F1:0.988
+  Ensemble — 3 model ★                 n=625  Acc:91.7%  Prec:95.7%  Rec:90.0%  F1:0.928
+
+📋 Ensemble Confusion Matrix:
+          Pred FR  Pred NFR
+True FR       240        15
+True NFR       37       333
+
+📋 Ensemble Full Classification Report:
+              precision    recall  f1-score   support
+
+          FR       0.87      0.94      0.90       255
+         NFR       0.96      0.90      0.93       370
+
+    accuracy                           0.92       625
+   macro avg       0.91      0.92      0.91       625
+weighted avg       0.92      0.92      0.92       625
+
+
+========================================================================
+📊  NFR SUBTYPE ACCURACY  (n=333)
+========================================================================
+  Overall: 98.2%
+
+  Per-subtype breakdown:
+                 precision    recall  f1-score   support
+
+   Availability       0.95      1.00      0.98        20
+          Legal       1.00      1.00      1.00        12
+  Look_and_Feel       1.00      1.00      1.00        28
+Maintainability       1.00      0.88      0.94        17
+    Operational       0.97      0.97      0.97        58
+    Performance       1.00      1.00      1.00        53
+    Portability       0.00      0.00      0.00         1
+    Reliability       1.00      1.00      1.00        10
+       Security       1.00      0.99      0.99        82
+      Usability       0.95      1.00      0.97        52
+
+       accuracy                           0.98       333
+      macro avg       0.89      0.88      0.88       333
+   weighted avg       0.98      0.98      0.98       333
+
+
+========================================================================
+  TABLE 3 — Classification Performance (PROMISE NFR, n=625)
+========================================================================
+  Model                                    n  Accuracy  Precision   Recall       F1
+  --------------------------------------------------------------------
+  Rules Classifier                       625     56.5%      70.9%    44.9%    0.550
+  LLM (Qwen2.5-7B-Instruct)              625     83.5%      91.1%    80.0%    0.852
+  NoRBERT (10-fold CV)                   625     98.6%      97.9%    99.7%    0.988
+  Ensemble — 3 model ★                   625     91.7%      95.7%    90.0%    0.928
+  ====================================================================
+
+🔍 Ensemble errors: 52/625
+   FP (pred NFR, true FR): 15
+   FN (pred FR, true NFR): 37
+
+   FN breakdown by subtype:
+truth_subtype
+Usability        15
+Look_and_Feel    10
+Security          5
+Operational       4
+Legal             1
+Availability      1
+Performance       1
+
+
+
+
+Loading tagged requirements...
+✅ Loaded 391 tagged requirements
+
+Ground truth distribution:
+  Complete   : 337
+  Incomplete : 54
+
+Connecting to Ollama (qwen2.5:7b-instruct)...
+✅ Ollama connected
+
+Running sanity check on one requirement...
+  Text  : The system shall allow users to log in.
+  Score : 0.9
+  Actors: ['system']
+  Action: allow
+  Pred  : complete
+
+🔹 Starting fresh — 391 requirements
+   Threshold: 0.8  |  Auto-saves every 25 requirements
+
+      1/391  |  Elapsed: 0.1min  |  ETA: 33.0min  |  Score: 0.90  |  Pred: complete
+     25/391  |  Elapsed: 2.1min  |  ETA: 31.5min  |  Score: 0.90  |  Pred: complete
+     50/391  |  Elapsed: 4.3min  |  ETA: 29.5min  |  Score: 0.90  |  Pred: complete
+     75/391  |  Elapsed: 6.5min  |  ETA: 27.4min  |  Score: 0.90  |  Pred: complete
+    100/391  |  Elapsed: 8.7min  |  ETA: 25.2min  |  Score: 0.90  |  Pred: complete
+    125/391  |  Elapsed: 10.8min  |  ETA: 23.0min  |  Score: 0.90  |  Pred: complete
+    150/391  |  Elapsed: 13.0min  |  ETA: 20.9min  |  Score: 0.90  |  Pred: complete
+    175/391  |  Elapsed: 15.2min  |  ETA: 18.7min  |  Score: 0.90  |  Pred: complete
+    200/391  |  Elapsed: 17.4min  |  ETA: 16.6min  |  Score: 0.90  |  Pred: complete
+    225/391  |  Elapsed: 19.5min  |  ETA: 14.4min  |  Score: 0.90  |  Pred: complete
+    250/391  |  Elapsed: 21.9min  |  ETA: 12.4min  |  Score: 0.90  |  Pred: complete
+    275/391  |  Elapsed: 24.5min  |  ETA: 10.3min  |  Score: 0.90  |  Pred: complete
+    300/391  |  Elapsed: 26.7min  |  ETA: 8.1min  |  Score: 0.90  |  Pred: complete
+    325/391  |  Elapsed: 29.3min  |  ETA: 6.0min  |  Score: 0.90  |  Pred: complete
+    350/391  |  Elapsed: 32.0min  |  ETA: 3.7min  |  Score: 0.90  |  Pred: complete
+    375/391  |  Elapsed: 34.7min  |  ETA: 1.5min  |  Score: 0.90  |  Pred: complete
+
+✅ All 391 requirements processed in 36.1 minutes
+
+=================================================================
+📊  STAGE 1 COMPLETENESS DETECTION  (n=391)
+=================================================================
+  Accuracy  : 0.8772  (87.7%)
+  Precision : 0.8750  (incomplete class)
+  Recall    : 0.1296  (incomplete class)
+  F1-Score  : 0.2258
+
+📋 Full Classification Report:
+              precision    recall  f1-score   support
+
+    complete       0.88      1.00      0.93       337
+  incomplete       0.88      0.13      0.23        54
+
+    accuracy                           0.88       391
+   macro avg       0.88      0.56      0.58       391
+weighted avg       0.88      0.88      0.84       391
+
+📋 Confusion Matrix:
+                 Pred complete  Pred incomplete
+True complete              336                1
+True incomplete             47                7
+
+📊 Score Distribution:
+  Complete   — Mean:0.901  Std:0.022  Min:0.600  Max:1.000
+  Incomplete — Mean:0.872  Std:0.095  Min:0.600  Max:1.000
+
+📊 Threshold Sensitivity:
+   Threshold   Accuracy  Precision   Recall       F1
+  --------------------------------------------------
+        0.50      86.2%       0.0%     0.0%    0.000
+        0.55      86.2%       0.0%     0.0%    0.000
+        0.60      86.2%       0.0%     0.0%    0.000
+        0.65      87.2%      83.3%     9.3%    0.167
+        0.70      87.2%      83.3%     9.3%    0.167
+        0.75      87.2%      83.3%     9.3%    0.167
+        0.80      87.7%      87.5%    13.0%    0.226 ← current
+        0.85      87.7%      87.5%    13.0%    0.226
+        0.90      87.7%      87.5%    13.0%    0.226
+
+📊 Operational Metrics:
+  Auto-approved : 383/391  (98.0%)
+  Flagged       : 8/391
+  False flag rate: 0.3%  (complete reqs wrongly flagged)
+  Miss rate     : 87.0%  (incomplete reqs not caught)
+  Avg questions : 2.0 per flagged req
+
+🔍 Missed incomplete requirements (47):
+  Score:0.90 | All user passwords must be stored in the database using a strong, salt...
+  Score:1.00 | The password reset token sent to a user's email must be single use and...
+  Score:0.90 | All API endpoints that access or modify sensitive data must require a ...
+  Score:0.90 | User sessions must be invalidated on the server side immediately after...
+  Score:1.00 | All user uploaded files must be scanned for malware before being store...
+
+🔍 Wrongly flagged complete (1) — first 5:
+  Score:0.60 | The system shall have a content security policy that prevents the load...
+
+=================================================================
+  THESIS TABLE — Stage 1 Completeness Detection (n=391)
+=================================================================
+  Accuracy          : 87.7%
+  Precision         : 87.5%  (incomplete detection)
+  Recall            : 13.0%  (incomplete detection)
+  F1-Score          : 0.226
+  Automation Rate   : 98.0%
+  False Flag Rate   : 0.3%
+  Miss Rate         : 87.0%
+  Threshold         : 0.8
+  Avg questions/req : 2.0
+=================================================================
+
+
+
+
+
+CM1 dataset: 35 requirements
+Ground truth: 28 dependencies, 1 conflicts
+============================================================
+Checking connections...
+✅ Ollama connected
+✅ Neo4j connected
+
+🔹 Creating 35 requirement nodes in Neo4j...
+✅ Nodes created
+
+🔹 Analyzing 595 pairs for dependencies and conflicts...
+   Semantic threshold: 0.30  |  LLM: qwen2.5:7b-instruct
+   Estimated time: 29–49 minutes
+
+
+✅ Done in 42.8 minutes
+   Dependencies detected: 95
+   Conflicts detected   : 2
+
+=================================================================
+📊  STAGE 3 EVALUATION — CM1 NASA DATASET (n=35)
+=================================================================
+
+  DEPENDENCY DETECTION:
+  Ground truth links    : 28
+  Detected links        : 95
+  True Positives        : 25
+  False Positives       : 70
+  False Negatives       : 3
+  Precision             : 0.2632  (26.3%)
+  Recall                : 0.8929  (89.3%)
+  F1-Score              : 0.4065
+
+  CONFLICT DETECTION:
+  Ground truth conflicts: 1
+  Detected conflicts    : 2
+  True Positives        : 0
+  False Positives       : 2
+  False Negatives       : 1
+  Precision             : 0.0000  (0.0%)
+  Recall                : 0.0000  (0.0%)
+  F1-Score              : 0.0000
+
+  ✅ Correctly detected dependencies (25):
+     CM1_02 → CM1_01
+     CM1_03 → CM1_01
+     CM1_04 → CM1_01
+     CM1_07 → CM1_01
+     CM1_08 → CM1_07
+     CM1_09 → CM1_04
+     CM1_09 → CM1_07
+     CM1_10 → CM1_04
+     CM1_11 → CM1_01
+     CM1_12 → CM1_11
+     CM1_16 → CM1_15
+     CM1_18 → CM1_17
+     CM1_19 → CM1_03
+     CM1_20 → CM1_03
+     CM1_22 → CM1_21
+     CM1_23 → CM1_03
+     CM1_24 → CM1_03
+     CM1_26 → CM1_25
+     CM1_27 → CM1_03
+     CM1_29 → CM1_01
+     CM1_30 → CM1_29
+     CM1_31 → CM1_02
+     CM1_31 → CM1_27
+     CM1_32 → CM1_02
+     CM1_35 → CM1_21
+
+  ❌ Missed dependencies (3):
+     CM1_12 → CM1_25
+     CM1_27 → CM1_02
+     CM1_32 → CM1_07
+
+  ⚠️  Extra detections not in GT (70):
+     CM1_03 → CM1_02
+     CM1_05 → CM1_01
+     CM1_06 → CM1_01
+     CM1_07 → CM1_02
+     CM1_07 → CM1_04
+     CM1_08 → CM1_01
+     CM1_08 → CM1_02
+     CM1_08 → CM1_04
+     CM1_09 → CM1_01
+     CM1_09 → CM1_08
+     CM1_10 → CM1_01
+     CM1_11 → CM1_02
+     CM1_11 → CM1_04
+     CM1_11 → CM1_06
+     CM1_11 → CM1_08
+     CM1_12 → CM1_01
+     CM1_12 → CM1_02
+     CM1_12 → CM1_04
+     CM1_12 → CM1_06
+     CM1_13 → CM1_01
+     CM1_14 → CM1_01
+     CM1_18 → CM1_15
+     CM1_18 → CM1_16
+     CM1_19 → CM1_01
+     CM1_21 → CM1_01
+     CM1_22 → CM1_01
+     CM1_22 → CM1_13
+     CM1_23 → CM1_01
+     CM1_23 → CM1_19
+     CM1_24 → CM1_01
+     CM1_24 → CM1_19
+     CM1_25 → CM1_01
+     CM1_25 → CM1_03
+     CM1_25 → CM1_17
+     CM1_26 → CM1_01
+     CM1_26 → CM1_02
+     CM1_26 → CM1_03
+     CM1_26 → CM1_04
+     CM1_26 → CM1_06
+     CM1_26 → CM1_12
+     CM1_26 → CM1_14
+     CM1_27 → CM1_01
+     CM1_27 → CM1_04
+     CM1_29 → CM1_04
+     CM1_29 → CM1_28
+     CM1_30 → CM1_01
+     CM1_30 → CM1_03
+     CM1_30 → CM1_04
+     CM1_30 → CM1_21
+     CM1_30 → CM1_27
+     CM1_30 → CM1_28
+     CM1_31 → CM1_01
+     CM1_31 → CM1_04
+     CM1_31 → CM1_10
+     CM1_31 → CM1_17
+     CM1_31 → CM1_21
+     CM1_31 → CM1_22
+     CM1_31 → CM1_28
+     CM1_32 → CM1_01
+     CM1_32 → CM1_03
+     CM1_32 → CM1_04
+     CM1_32 → CM1_10
+     CM1_32 → CM1_27
+     CM1_32 → CM1_28
+     CM1_32 → CM1_29
+     CM1_32 → CM1_30
+     CM1_33 → CM1_21
+     CM1_34 → CM1_01
+     CM1_34 → CM1_04
+     CM1_34 → CM1_17
+
+  Conflicts detected:
+     CM1_12 ↔ CM1_34  [⚠️  extra]
+     CM1_26 ↔ CM1_34  [⚠️  extra]
+
+  GRAPH METRICS:
+  Nodes         : 35
+  Total edges   : 97
+  Graph density : 0.082
+  Orphan nodes  : 0/35  (0.0%)
+
+=================================================================
+  THESIS TABLE — Stage 3 Benchmark (CM1, n=35)
+=================================================================
+  Metric                           Dependency     Conflict
+  -------------------------------------------------------
+  Ground truth links                       28            1
+  Detected                                 95            2
+  True Positives                           25            0
+  Precision                             26.3%         0.0%
+  Recall                                89.3%         0.0%
+  F1-Score                              0.407        0.000
+  Graph density                         0.082            —
+  Orphan rate                            0.0%            —
+=================================================================
