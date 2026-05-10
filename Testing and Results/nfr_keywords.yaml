@@ -1,0 +1,63 @@
+Performance:
+  - latency
+  - throughput
+  - response time
+  - capacity
+  - resource utilization
+  - seconds
+  - ms
+  - speed
+  - load
+  - bottleneck
+
+Security:
+  - encryption
+  - authentication
+  - authorization
+  - audit
+  - privacy
+  - vulnerability
+  - access
+  - secure
+  - credentials
+  - mfa
+  - encrypt
+
+Reliability:
+  - availability
+  - fault tolerance
+  - recoverability
+  - uptime
+  - crash
+  - redundancy
+  - backup
+  - failover
+
+Usability:
+  - accessibility
+  - learnability
+  - operability
+  - user error protection
+  - ui
+  - ux
+  - intuitive
+  - interface
+
+Maintainability:
+  - modularity
+  - reusability
+  - analyzability
+  - modifiable
+  - testability
+  - api
+  - documentation
+  - refactor
+
+Portability:
+  - adaptability
+  - installability
+  - replaceability
+  - platform
+  - os
+  - environment
+  - migration
