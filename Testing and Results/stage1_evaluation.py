@@ -1,8 +1,6 @@
 # ============================================================
 # Stage 1 Completeness Detection — Full Evaluation
-# Uses your exact Stage1Structuring class
 # Input: NER-tagged JSON with ACTOR, GOAL, RATIONALE tags
-# Run: python stage1_eval.py
 # ============================================================
 
 import os
