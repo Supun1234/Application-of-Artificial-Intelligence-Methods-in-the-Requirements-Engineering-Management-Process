@@ -1,0 +1,198 @@
+[
+  {
+    "id": "BANK_01",
+    "text": "Registered users shall be able to log in using their email address and password.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": []
+  },
+  {
+    "id": "BANK_02",
+    "text": "Upon successful login, the application shall display the account dashboard to the user.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_01"]
+  },
+  {
+    "id": "BANK_03",
+    "text": "User accounts shall be locked automatically after 5 consecutive failed login attempts.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_01","BANK_02"]
+  },
+  {
+    "id": "BANK_04",
+    "text": "Authenticated users shall be able to transfer funds between their own bank accounts.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02"]
+  },
+  {
+    "id": "BANK_05",
+    "text": "An SMS confirmation shall be sent to the user's registered mobile number after each successful fund transfer.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04"]
+  },
+  {
+    "id": "BANK_06",
+    "text": "All active sessions shall expire after 15 minutes of user inactivity.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01"],
+    "conflicts_with": ["BANK_09"],
+    "conflict_note": "BANK_06 requires 15-minute expiry. BANK_09 requires 30-day persistence on trusted devices."
+  },
+  {
+    "id": "BANK_07",
+    "text": "Fund transfer requests shall be processed end-to-end within 3 seconds for 95% of transactions.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_04"],
+    "conflicts_with": ["BANK_25"],
+    "conflict_note": "BANK_07 requires 3-second SLA. BANK_25 adds fraud scoring that increases processing time."
+  },
+  {
+    "id": "BANK_08",
+    "text": "All data transmitted between the client and server shall be encrypted using TLS 1.3 or higher.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01", "BANK_04"]
+  },
+  {
+    "id": "BANK_09",
+    "text": "Login sessions shall persist for 30 days on devices that the user has marked as trusted.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01"],
+    "conflicts_with": ["BANK_06"],
+    "conflict_note": "Direct conflict with BANK_06: 15-minute expiry vs 30-day persistence."
+  },
+  {
+    "id": "BANK_10",
+    "text": "The login process shall be straightforward and secure for all account holders.",
+    "truth": {"complete": false, "type": "NFR"},
+    "links": ["BANK_01"],
+    "incomplete_note": "Incomplete — straightforward and secure are undefined. No measurable criteria. LLM will flag missing_info."
+  },
+  {
+    "id": "BANK_11",
+    "text": "Dashboard pages shall respond quickly under normal usage conditions.",
+    "truth": {"complete": false, "type": "NFR"},
+    "links": ["BANK_02"],
+    "incomplete_note": "Incomplete — quickly is not quantified. No load conditions, no response time threshold defined."
+  },
+  {
+    "id": "BANK_12",
+    "text": "Users shall be able to download a PDF account statement for any selected date range.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02"]
+  },
+  {
+    "id": "BANK_13",
+    "text": "Authenticated users shall be able to initiate international wire transfers to SEPA-supported accounts.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04"]
+  },
+  {
+    "id": "BANK_14",
+    "text": "Users shall receive an email and in-app notification within 2 minutes when a debit transaction exceeding 500 EUR is posted to their account.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02", "BANK_05"]
+  },
+  {
+    "id": "BANK_15",
+    "text": "Users shall be able to schedule recurring fund transfers on a daily, weekly, or monthly basis.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04"]
+  },
+  {
+    "id": "BANK_16",
+    "text": "A scheduled transfer shall be automatically cancelled when the source account has insufficient funds at execution time.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_15", "BANK_14"]
+  },
+  {
+    "id": "BANK_17",
+    "text": "Transaction records shall be stored in the system for compliance purposes.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": ["BANK_04"],
+    "incomplete_note": "Incomplete — no retention period, no storage type, no regulatory reference specified."
+  },
+  {
+    "id": "BANK_18",
+    "text": "A preliminary loan eligibility decision shall be returned to the applicant within 60 seconds for 90% of submissions.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_19"]
+  },
+  {
+    "id": "BANK_19",
+    "text": "Authenticated users shall be able to submit a personal loan application through the online portal.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_01"]
+  },
+  {
+    "id": "BANK_20",
+    "text": "A one-time passcode sent to the registered mobile number shall be required before any international wire transfer is processed.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_13", "BANK_06", "BANK_09"],
+    "conflicts_with": ["BANK_09"],
+    "conflict_note": "BANK_09 allows trusted devices to bypass re-authentication. BANK_20 mandates OTP regardless of device trust."
+  },
+  {
+    "id": "BANK_21",
+    "text": "Alert notifications shall be delivered to users when account activity is detected.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": ["BANK_14"],
+    "incomplete_note": "Incomplete — no actor performing delivery, no channel specified, activity type undefined, no delivery SLA."
+  },
+  {
+    "id": "BANK_22",
+    "text": "Platform availability shall be maintained at 99.95% or above, measured on a rolling 30-day basis.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_07"]
+  },
+  {
+    "id": "BANK_23",
+    "text": "All financial transaction records shall be retained in tamper-evident storage for a minimum of 7 years.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_04", "BANK_13", "BANK_12"]
+  },
+  {
+    "id": "BANK_24",
+    "text": "Administrator users shall be able to manually unlock a locked customer account after verifying the customer's identity.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_03"]
+  },
+  {
+    "id": "BANK_25",
+    "text": "Outgoing transfers shall be automatically blocked and the account frozen when more than 3 transfers each exceeding 1,000 EUR are detected within a 10-minute window.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04", "BANK_13", "BANK_07"],
+    "conflicts_with": ["BANK_07"],
+    "conflict_note": "Real-time fraud scoring adds latency that may cause BANK_07's 3-second SLA to be breached."
+  },
+  {
+    "id": "BANK_26",
+    "text": "All user-facing screens shall conform to WCAG 2.1 Level AA accessibility standards.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01", "BANK_02", "BANK_04", "BANK_12"]
+  },
+  {
+    "id": "BANK_27",
+    "text": "Users shall be able to view their spending history in a suitable format.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": ["BANK_12"],
+    "incomplete_note": "Incomplete — suitable format undefined, no time range, no categorisation specified."
+  },
+  {
+    "id": "BANK_28",
+    "text": "Users shall be able to configure up to 5 monthly spending category budgets and receive an in-app alert when 80% of any budget is reached.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02", "BANK_14"]
+  },
+  {
+    "id": "BANK_29",
+    "text": "All REST API endpoints shall enforce OAuth 2.0 bearer token authentication and return HTTP 401 within 200 milliseconds for unauthenticated requests.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01", "BANK_08"]
+  },
+  {
+    "id": "BANK_30",
+    "text": "Customer support functionality shall be available within the application.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": ["BANK_27"],
+    "incomplete_note": "Incomplete — no channel (chat/email/phone), no hours, no response SLA, no escalation path defined."
+  }
+]

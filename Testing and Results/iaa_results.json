@@ -1,0 +1,428 @@
+{
+  "n_requirements": 30,
+  "annotators": [
+    "Author",
+    "ChatGPT",
+    "Claude"
+  ],
+  "stage1": {
+    "pairs": [
+      {
+        "pair": "Author vs ChatGPT",
+        "n": 30,
+        "agreed": 30,
+        "kappa": 1.0,
+        "accuracy": 1.0,
+        "mismatches": []
+      },
+      {
+        "pair": "Author vs Claude",
+        "n": 30,
+        "agreed": 30,
+        "kappa": 1.0,
+        "accuracy": 1.0,
+        "mismatches": []
+      },
+      {
+        "pair": "ChatGPT vs Claude",
+        "n": 30,
+        "agreed": 30,
+        "kappa": 1.0,
+        "accuracy": 1.0,
+        "mismatches": []
+      }
+    ],
+    "three_way": {
+      "n": 30,
+      "all_three_agree": 30,
+      "at_least_two": 30,
+      "pct_all_agree": 100.0,
+      "pct_two_agree": 100.0
+    }
+  },
+  "stage2": {
+    "pairs": [
+      {
+        "pair": "Author vs ChatGPT",
+        "n": 30,
+        "agreed": 29,
+        "kappa": 0.9296,
+        "accuracy": 0.9667,
+        "mismatches": [
+          {
+            "id": "BANK_20",
+            "Author": "NFR",
+            "ChatGPT": "FR"
+          }
+        ]
+      },
+      {
+        "pair": "Author vs Claude",
+        "n": 30,
+        "agreed": 30,
+        "kappa": 1.0,
+        "accuracy": 1.0,
+        "mismatches": []
+      },
+      {
+        "pair": "ChatGPT vs Claude",
+        "n": 30,
+        "agreed": 29,
+        "kappa": 0.9296,
+        "accuracy": 0.9667,
+        "mismatches": [
+          {
+            "id": "BANK_20",
+            "ChatGPT": "FR",
+            "Claude": "NFR"
+          }
+        ]
+      }
+    ],
+    "three_way": {
+      "n": 30,
+      "all_three_agree": 29,
+      "at_least_two": 30,
+      "pct_all_agree": 96.7,
+      "pct_two_agree": 100.0
+    }
+  },
+  "stage3": {
+    "pairs": [
+      {
+        "pair": "Author vs ChatGPT",
+        "n_requirements": 30,
+        "links_a": 44,
+        "links_b": 62,
+        "agreed_links": 35,
+        "jaccard": 0.493,
+        "kappa": -0.2348,
+        "only_in_a": [
+          [
+            "BANK_03",
+            "BANK_02"
+          ],
+          [
+            "BANK_04",
+            "BANK_02"
+          ],
+          [
+            "BANK_14",
+            "BANK_02"
+          ],
+          [
+            "BANK_16",
+            "BANK_14"
+          ],
+          [
+            "BANK_17",
+            "BANK_04"
+          ],
+          [
+            "BANK_19",
+            "BANK_01"
+          ],
+          [
+            "BANK_23",
+            "BANK_04"
+          ],
+          [
+            "BANK_23",
+            "BANK_13"
+          ],
+          [
+            "BANK_28",
+            "BANK_02"
+          ]
+        ],
+        "only_in_b": [
+          [
+            "BANK_01",
+            "BANK_02"
+          ],
+          [
+            "BANK_01",
+            "BANK_03"
+          ],
+          [
+            "BANK_01",
+            "BANK_06"
+          ],
+          [
+            "BANK_01",
+            "BANK_09"
+          ],
+          [
+            "BANK_02",
+            "BANK_11"
+          ],
+          [
+            "BANK_03",
+            "BANK_24"
+          ],
+          [
+            "BANK_04",
+            "BANK_05"
+          ],
+          [
+            "BANK_04",
+            "BANK_07"
+          ],
+          [
+            "BANK_04",
+            "BANK_13"
+          ],
+          [
+            "BANK_04",
+            "BANK_15"
+          ],
+          [
+            "BANK_05",
+            "BANK_14"
+          ],
+          [
+            "BANK_05",
+            "BANK_21"
+          ],
+          [
+            "BANK_06",
+            "BANK_20"
+          ],
+          [
+            "BANK_07",
+            "BANK_25"
+          ],
+          [
+            "BANK_08",
+            "BANK_29"
+          ],
+          [
+            "BANK_09",
+            "BANK_06"
+          ],
+          [
+            "BANK_10",
+            "BANK_08"
+          ],
+          [
+            "BANK_12",
+            "BANK_23"
+          ],
+          [
+            "BANK_13",
+            "BANK_20"
+          ],
+          [
+            "BANK_14",
+            "BANK_21"
+          ],
+          [
+            "BANK_15",
+            "BANK_16"
+          ],
+          [
+            "BANK_16",
+            "BANK_21"
+          ],
+          [
+            "BANK_17",
+            "BANK_23"
+          ],
+          [
+            "BANK_19",
+            "BANK_18"
+          ],
+          [
+            "BANK_21",
+            "BANK_05"
+          ],
+          [
+            "BANK_23",
+            "BANK_17"
+          ],
+          [
+            "BANK_28",
+            "BANK_21"
+          ]
+        ]
+      },
+      {
+        "pair": "Author vs Claude",
+        "n_requirements": 30,
+        "links_a": 44,
+        "links_b": 42,
+        "agreed_links": 42,
+        "jaccard": 0.9545,
+        "kappa": 0.0,
+        "only_in_a": [
+          [
+            "BANK_03",
+            "BANK_02"
+          ],
+          [
+            "BANK_30",
+            "BANK_27"
+          ]
+        ],
+        "only_in_b": []
+      },
+      {
+        "pair": "ChatGPT vs Claude",
+        "n_requirements": 30,
+        "links_a": 62,
+        "links_b": 42,
+        "agreed_links": 34,
+        "jaccard": 0.4857,
+        "kappa": -0.2162,
+        "only_in_a": [
+          [
+            "BANK_01",
+            "BANK_02"
+          ],
+          [
+            "BANK_01",
+            "BANK_03"
+          ],
+          [
+            "BANK_01",
+            "BANK_06"
+          ],
+          [
+            "BANK_01",
+            "BANK_09"
+          ],
+          [
+            "BANK_02",
+            "BANK_11"
+          ],
+          [
+            "BANK_03",
+            "BANK_24"
+          ],
+          [
+            "BANK_04",
+            "BANK_05"
+          ],
+          [
+            "BANK_04",
+            "BANK_07"
+          ],
+          [
+            "BANK_04",
+            "BANK_13"
+          ],
+          [
+            "BANK_04",
+            "BANK_15"
+          ],
+          [
+            "BANK_05",
+            "BANK_14"
+          ],
+          [
+            "BANK_05",
+            "BANK_21"
+          ],
+          [
+            "BANK_06",
+            "BANK_20"
+          ],
+          [
+            "BANK_07",
+            "BANK_25"
+          ],
+          [
+            "BANK_08",
+            "BANK_29"
+          ],
+          [
+            "BANK_09",
+            "BANK_06"
+          ],
+          [
+            "BANK_10",
+            "BANK_08"
+          ],
+          [
+            "BANK_12",
+            "BANK_23"
+          ],
+          [
+            "BANK_13",
+            "BANK_20"
+          ],
+          [
+            "BANK_14",
+            "BANK_21"
+          ],
+          [
+            "BANK_15",
+            "BANK_16"
+          ],
+          [
+            "BANK_16",
+            "BANK_21"
+          ],
+          [
+            "BANK_17",
+            "BANK_23"
+          ],
+          [
+            "BANK_19",
+            "BANK_18"
+          ],
+          [
+            "BANK_21",
+            "BANK_05"
+          ],
+          [
+            "BANK_23",
+            "BANK_17"
+          ],
+          [
+            "BANK_28",
+            "BANK_21"
+          ],
+          [
+            "BANK_30",
+            "BANK_27"
+          ]
+        ],
+        "only_in_b": [
+          [
+            "BANK_04",
+            "BANK_02"
+          ],
+          [
+            "BANK_14",
+            "BANK_02"
+          ],
+          [
+            "BANK_16",
+            "BANK_14"
+          ],
+          [
+            "BANK_17",
+            "BANK_04"
+          ],
+          [
+            "BANK_19",
+            "BANK_01"
+          ],
+          [
+            "BANK_23",
+            "BANK_04"
+          ],
+          [
+            "BANK_23",
+            "BANK_13"
+          ],
+          [
+            "BANK_28",
+            "BANK_02"
+          ]
+        ]
+      }
+    ]
+  }
+}

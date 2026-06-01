@@ -1,0 +1,197 @@
+[
+  {
+    "id": "BANK_01",
+    "text": "The system shall allow registered users to log in using their email address and password.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": []
+  },
+  {
+    "id": "BANK_02",
+    "text": "The system shall display the account dashboard showing current balance, recent transactions, and quick transfer options after successful login.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_01"]
+    
+  },
+  {
+    "id": "BANK_03",
+    "text": "The system shall lock the user account after 5 consecutive failed login attempts and send an unlock email to the registered address.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_01"]
+  
+  },
+  {
+    "id": "BANK_04",
+    "text": "The system shall allow authenticated users to transfer funds between their own accounts by entering an amount and selecting source and destination accounts.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02"]
+    
+  },
+  {
+    "id": "BANK_05",
+    "text": "The system shall send an SMS confirmation to the user's registered mobile number containing the transfer amount, destination account last 4 digits, and timestamp after every successful fund transfer.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04"]
+    
+  },
+  {
+    "id": "BANK_06",
+    "text": "All user authentication sessions shall expire after 15 minutes of inactivity and require re-authentication before any further account access.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01"],
+    "conflicts_with": ["BANK_09"]
+    
+  },
+  {
+    "id": "BANK_07",
+    "text": "Fund transfer transactions shall complete end-to-end processing within 3 seconds for 95% of requests under normal load of up to 10,000 concurrent users.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_04"],
+    "conflicts_with": ["BANK_25"]
+  
+  },
+  {
+    "id": "BANK_08",
+    "text": "The system shall encrypt all data transmitted between the client browser and server using TLS 1.3 or higher, including login credentials and transaction data.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01", "BANK_04"]
+    
+  },
+  {
+    "id": "BANK_09",
+    "text": "The system shall maintain persistent login sessions for 30 days on trusted devices to improve user convenience without requiring repeated authentication.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01"],
+    "conflicts_with": ["BANK_06"]
+  
+  },
+  {
+    "id": "BANK_10",
+    "text": "Login should be easy and secure for all customers.",
+    "truth": {"complete": false, "type": "NFR"},
+    "links": ["BANK_01"]
+    
+  },
+  {
+    "id": "BANK_11",
+    "text": "The dashboard should load fast.",
+    "truth": {"complete": false, "type": "NFR"},
+    "links": ["BANK_02"]
+  },
+  {
+    "id": "BANK_12",
+    "text": "The system shall generate a downloadable PDF statement for any selected date range showing all transactions, opening balance, closing balance, and account holder details.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02"]
+  },
+  {
+    "id": "BANK_13",
+    "text": "The system shall allow authenticated users to initiate international wire transfers to accounts in SEPA-supported countries by providing the recipient IBAN, BIC/SWIFT code, transfer amount in originating currency, and a transfer reason selected from a predefined dropdown list.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04"]
+  },
+  {
+    "id": "BANK_14",
+    "text": "The system shall send an email and in-app notification to the account holder within 2 minutes when any debit transaction exceeding 500 EUR is posted to their account, regardless of whether the transaction was initiated by the user.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02", "BANK_05"]
+  },
+  {
+    "id": "BANK_15",
+    "text": "The system shall allow users to schedule recurring fund transfers on a daily, weekly, or monthly basis, with the ability to set an end date or a maximum number of executions up to 60.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04"]
+  },
+  {
+    "id": "BANK_16",
+    "text": "The system shall automatically cancel any pending scheduled transfer if the source account balance falls below the required transfer amount at the time of scheduled execution and notify the account holder via email within 5 minutes of the cancellation.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_15", "BANK_14"]
+  },
+  {
+    "id": "BANK_17",
+    "text": "Transactions need to be stored.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": ["BANK_04"]
+  },
+  {
+    "id": "BANK_18",
+    "text": "The loan application processing engine shall return a preliminary credit eligibility decision to the applicant within 60 seconds of submission for 90% of applications received during business hours, defined as 08:00 to 18:00 CET on weekdays.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_19"]
+  },
+  {
+    "id": "BANK_19",
+    "text": "The system shall allow authenticated users to apply for a personal loan online by submitting their current employment status, gross monthly income, requested loan amount between 1,000 and 50,000 EUR, and preferred repayment period of 12, 24, 36, or 60 months.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_01"]
+  },
+  {
+    "id": "BANK_20",
+    "text": "The system shall require re-authentication via one-time passcode sent to the registered mobile number before processing any international wire transfer, regardless of the session age or device trust status.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_13", "BANK_06", "BANK_09"],
+    "conflicts_with": ["BANK_09"]
+  },
+  {
+    "id": "BANK_21",
+    "text": "Notifications should be sent to users.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": ["BANK_14"]
+  },
+  {
+    "id": "BANK_22",
+    "text": "The system shall maintain 99.95% uptime measured on a rolling 30-day calendar window, excluding pre-announced maintenance periods communicated to users at least 48 hours in advance via the in-app notice board and registered email address.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_07"]
+  },
+  {
+    "id": "BANK_23",
+    "text": "The system shall retain all financial transaction records in tamper-evident, encrypted storage for a minimum of 7 years from the transaction date, in compliance with EU PSD2 Directive Article 95 and EBA audit trail guidelines.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_04", "BANK_13", "BANK_12"]
+  },
+  {
+    "id": "BANK_24",
+    "text": "Branch staff with administrator role shall be able to manually unlock a locked customer account after verifying customer identity through at least two of the following: government-issued photo ID, registered phone OTP, or three correct security question answers.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_03"]
+  },
+  {
+    "id": "BANK_25",
+    "text": "The fraud detection module shall automatically place a hold on any outgoing transfer and freeze the originating account for 30 minutes if more than 3 outgoing transfers each exceeding 1,000 EUR are detected from the same account within any rolling 10-minute window.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_04", "BANK_13", "BANK_07"],
+    "conflicts_with": ["BANK_07"]
+  },
+  {
+    "id": "BANK_26",
+    "text": "The mobile application shall conform to WCAG 2.1 Level AA accessibility standards across all user-facing screens including authentication, account dashboard, fund transfer, and statement download flows.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01", "BANK_02", "BANK_04", "BANK_12"]
+  },
+  {
+    "id": "BANK_27",
+    "text": "Reports should be available.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": ["BANK_12"]
+    
+  },
+  {
+    "id": "BANK_28",
+    "text": "The system shall allow authenticated users to configure up to 5 monthly spending category budgets, receive an in-app push notification when 80% of any category budget is consumed, and be prevented from completing further spending in that category until they explicitly confirm a budget override.",
+    "truth": {"complete": true, "type": "FR"},
+    "links": ["BANK_02", "BANK_14"]
+  },
+  {
+    "id": "BANK_29",
+    "text": "All REST API endpoints exposed by the system shall require OAuth 2.0 bearer token authentication and return HTTP 401 with a standardised error body within 200 milliseconds for any unauthenticated or unauthorised request.",
+    "truth": {"complete": true, "type": "NFR"},
+    "links": ["BANK_01", "BANK_08"]
+  },
+  {
+    "id": "BANK_30",
+    "text": "Customer support should be improved.",
+    "truth": {"complete": false, "type": "FR"},
+    "links": []
+  }
+]
